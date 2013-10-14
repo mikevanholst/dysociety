@@ -1,0 +1,31 @@
+<h1>Listing culsertions</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Title</th>
+      <th>Content</th>
+      <th>Tally</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @culsertions.each do |culsertion| %>
+      <tr>
+        <td><%= culsertion.title %></td>
+        <td><%= culsertion.content %></td>
+        <td><%= culsertion.tally %></td>
+        <td><%= link_to 'Show', culsertion %></td>
+        <td><%= link_to 'Edit', edit_culsertion_path(culsertion) %></td>
+        <td><%= link_to 'Destroy', culsertion, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Culsertion', new_culsertion_path %>

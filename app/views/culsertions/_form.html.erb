@@ -1,0 +1,29 @@
+<%= form_for(@culsertion) do |f| %>
+  <% if @culsertion.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@culsertion.errors.count, "error") %> prohibited this culsertion from being saved:</h2>
+
+      <ul>
+      <% @culsertion.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :title %><br>
+    <%= f.text_field :title %>
+  </div>
+  <div class="field">
+    <%= f.label :content %><br>
+    <%= f.text_area :content %>
+  </div>
+  <div class="field">
+    <%= f.label :tally %><br>
+    <%= f.number_field :tally %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
