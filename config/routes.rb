@@ -1,4 +1,6 @@
 Dysociety::Application.routes.draw do
+  resources :blogs
+
   resources :articles
 
   # The priority is based upon order of creation: first created -> highest priority.
