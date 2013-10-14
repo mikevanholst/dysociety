@@ -1,4 +1,8 @@
 Dysociety::Application.routes.draw do
+  resources :sashes
+
+  resources :badges
+
   resources :scorecards
 
   resources :categories do
