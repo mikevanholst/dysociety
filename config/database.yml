@@ -18,9 +18,10 @@ development:
   adapter: postgresql
   encoding: unicode
   database: dysociety_development
-  pool: 5
-  username: dysociety
-  password:
+  host: localhost
+  # pool: 5
+  # username: dysociety
+  # password:
 
   # Connect on a TCP socket. Omitted by default since the client uses a
   # domain socket that doesn't need configuration. Windows does not have
@@ -47,14 +48,16 @@ test:
   adapter: postgresql
   encoding: unicode
   database: dysociety_test
-  pool: 5
-  username: dysociety
-  password:
+  host: localhost
+  # pool: 5
+  # username: dysociety
+  # password:
 
-production:
-  adapter: postgresql
-  encoding: unicode
-  database: dysociety_production
-  pool: 5
-  username: dysociety
-  password:
+# production:
+#   adapter: postgresql
+#   encoding: unicode
+#   database: dysociety_production
+#    host: localhost
+  # pool: 5
+  # username: dysociety
+  # password:
