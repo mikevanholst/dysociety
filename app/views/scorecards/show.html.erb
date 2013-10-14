@@ -1,0 +1,44 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Total:</strong>
+  <%= @scorecard.total %>
+</p>
+
+<p>
+  <strong>Chapters:</strong>
+  <%= @scorecard.chapters %>
+</p>
+
+<p>
+  <strong>Companies:</strong>
+  <%= @scorecard.companies %>
+</p>
+
+<p>
+  <strong>Level:</strong>
+  <%= @scorecard.level %>
+</p>
+
+<p>
+  <strong>Books:</strong>
+  <%= @scorecard.books %>
+</p>
+
+<p>
+  <strong>Shares:</strong>
+  <%= @scorecard.shares %>
+</p>
+
+<p>
+  <strong>Sash:</strong>
+  <%= @scorecard.sash_id %>
+</p>
+
+<p>
+  <strong>Donations:</strong>
+  <%= @scorecard.donations %>
+</p>
+
+<%= link_to 'Edit', edit_scorecard_path(@scorecard) %> |
+<%= link_to 'Back', scorecards_path %>

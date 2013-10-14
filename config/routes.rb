@@ -1,4 +1,6 @@
 Dysociety::Application.routes.draw do
+  resources :scorecards
+
   resources :categories do
 end
 

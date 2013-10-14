@@ -1,0 +1,21 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  total: 1
+  chapters: 1
+  companies: 1
+  level: 1
+  books: 1
+  shares: 1
+  sash_id: 1
+  donations: 1
+
+two:
+  total: 1
+  chapters: 1
+  companies: 1
+  level: 1
+  books: 1
+  shares: 1
+  sash_id: 1
+  donations: 1

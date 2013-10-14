@@ -1,0 +1,41 @@
+<h1>Listing scorecards</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Total</th>
+      <th>Chapters</th>
+      <th>Companies</th>
+      <th>Level</th>
+      <th>Books</th>
+      <th>Shares</th>
+      <th>Sash</th>
+      <th>Donations</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @scorecards.each do |scorecard| %>
+      <tr>
+        <td><%= scorecard.total %></td>
+        <td><%= scorecard.chapters %></td>
+        <td><%= scorecard.companies %></td>
+        <td><%= scorecard.level %></td>
+        <td><%= scorecard.books %></td>
+        <td><%= scorecard.shares %></td>
+        <td><%= scorecard.sash_id %></td>
+        <td><%= scorecard.donations %></td>
+        <td><%= link_to 'Show', scorecard %></td>
+        <td><%= link_to 'Edit', edit_scorecard_path(scorecard) %></td>
+        <td><%= link_to 'Destroy', scorecard, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Scorecard', new_scorecard_path %>
