@@ -1,4 +1,8 @@
 Dysociety::Application.routes.draw do
+  resources :categories do
+end
+
+ 
   resources :videos
 
   resources :culsertions
