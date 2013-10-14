@@ -1,4 +1,6 @@
 Dysociety::Application.routes.draw do
+  resources :chapters
+
   resources :sashes
 
   resources :badges
