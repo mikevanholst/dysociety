@@ -1,4 +1,6 @@
 Dysociety::Application.routes.draw do
+  resources :videos
+
   resources :culsertions
 
   resources :blogs
