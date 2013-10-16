@@ -1,0 +1,39 @@
+<h1>Listing questions</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Text</th>
+      <th>Right</th>
+      <th>Wrong 1</th>
+      <th>Wrong 2</th>
+      <th>Wrong 3</th>
+      <th>Success</th>
+      <th>Failure</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @questions.each do |question| %>
+      <tr>
+        <td><%= question.text %></td>
+        <td><%= question.right %></td>
+        <td><%= question.wrong_1 %></td>
+        <td><%= question.wrong_2 %></td>
+        <td><%= question.wrong_3 %></td>
+        <td><%= question.success %></td>
+        <td><%= question.failure %></td>
+        <td><%= link_to 'Show', question %></td>
+        <td><%= link_to 'Edit', edit_question_path(question) %></td>
+        <td><%= link_to 'Destroy', question, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Question', new_question_path %>
