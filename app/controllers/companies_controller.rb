@@ -12,10 +12,21 @@ class CompaniesController < ApplicationController
   def show
   end
 
-  # GET /companies/new
-  def new
-    @company = Company.new
+def new
+    if Rails.env.development?
+      @company = FactoryGirl.build(:company)
+    else
+      @company = Company.new
+    end
   end
+
+
+
+
+  # GET /companies/new
+  # def new
+  #   @company = Company.new
+  # end
 
   # GET /companies/1/edit
   def edit

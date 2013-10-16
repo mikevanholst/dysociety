@@ -12,10 +12,20 @@ class ChaptersController < ApplicationController
   def show
   end
 
-  # GET /chapters/new
-  def new
-    @chapter = Chapter.new
+ def new
+    if Rails.env.development?
+      @chapter = FactoryGirl.build(:chapter)
+    else
+      @chapter = Chapter.new
+    end
   end
+
+
+
+  # GET /chapters/new
+  # def new
+  #   @chapter = Chapter.new
+  # end
 
   # GET /chapters/1/edit
   def edit

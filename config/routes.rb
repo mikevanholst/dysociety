@@ -1,6 +1,9 @@
 Dysociety::Application.routes.draw do
   devise_for :users
   get "home/home"
+
+  get "home/quiz_trial"
+
   resources :chapters
   resources :companies
   resources :sashes
@@ -25,7 +28,7 @@ end
   # See how all your routes lay out with "rake routes".
 
   # You can have the root of your site routed with "root"
-  root 'home#home'
+  root 'home#quiz_trial'
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'

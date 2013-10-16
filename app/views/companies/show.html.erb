@@ -1,13 +1,13 @@
 <p id="notice"><%= notice %></p>
 
-<p>
-  <strong>Name:</strong>
-  <%= @company.name %>
-</p>
+
+ 
+  <h2><%= @company.name %></h2>
+
 
 <p>
   <strong>Web address:</strong>
-  <%= @company.web_address %>
+  <%= link_to @company.web_address, "http://www.picoempowerment.com" %>
 </p>
 
 <p>
