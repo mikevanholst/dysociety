@@ -1,10 +1,16 @@
 
 
 
-<div id="book">
-
- <%=  image_tag("book.jpg", id: "book_photo" ) %>
-
+<div id="book" >
+  <div class="row">
+    <div class="span3 offset1 bbox" id='order_now'><a href="#">  <h2 >Order Now</h2> </a> </div>
+    <div class='span3 bbox'><%=  image_tag("book.jpg", id: "book_photo" ) %></div>
+    <div class="span3 bbox" id='order_now'><a href="#">  <h2 >Get Involved</h2> </a> </div>
+  </div>
 </div>
+
+
+
+
 
 <%= render 'top_videos' %>

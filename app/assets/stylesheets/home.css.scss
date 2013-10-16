@@ -1,3 +1,42 @@
 // Place all the styles related to the home controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+#book {
+  background: radial-gradient(blue, navy);
+border: 2px white solid;
+padding-top: 50px;
+padding-bottom: 50px;
+
+  .row {
+    margin:auto;
+  }
+
+
+  .bbox{
+    border: 2px white solid;
+    
+
+  
+   }
+}
+
+
+
+#book_photo {
+  
+  border: 2px solid navy;
+  // height: 300px;
+  width: 225px;
+  border-radius: 5px;
+  // margin-top:50px;
+  // margin-bottom:50px;
+  border: 2px white solid;
+margin:auto;
+
+}
+#order_now {
+// border: 2px white solid;
+//   text-align: center;
+//  margin-top: 10%;
+}
