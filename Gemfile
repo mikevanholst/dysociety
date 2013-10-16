@@ -3,8 +3,19 @@ source 'https://rubygems.org'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.0.0'
 
-# Use postgresql as the database for Active Record
+# Use sqlite3 as the database for Active Record
 gem 'pg'
+
+gem 'bootstrap-sass', '~> 2.3.2.2'
+
+gem 'devise',              github: 'plataformatec/devise'
+gem 'responders',          github: 'plataformatec/responders'
+gem 'inherited_resources', github: 'josevalim/inherited_resources'
+gem 'ransack',             github: 'ernie/ransack'
+gem 'activeadmin',         github: 'gregbell/active_admin'
+
+gem 'formtastic',          github: 'justinfrench/formtastic'
+# gem 'protected_attributes'
 
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 4.0.0'
@@ -41,5 +52,18 @@ end
 # Use Capistrano for deployment
 # gem 'capistrano', group: :development
 
-# Use debugger
-# gem 'debugger', group: [:development, :test]
+group :development, :test do 
+  gem 'letter_opener'
+  gem 'debugger'
+  gem "better_errors"
+  gem "binding_of_caller"
+  gem "pry-rails"
+  gem "rspec"
+  gem "rspec-rails"
+  gem "autotest"
+  gem "autotest-standalone"
+  gem 'debugger'
+  gem 'factory_girl_rails'
+  gem 'shoulda'
+  gem 'faker'
+end

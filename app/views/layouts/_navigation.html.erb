@@ -1,0 +1,28 @@
+<ul class="nav">
+  <li><%= link_to 'Home', root_path %></li>
+  <li><%#= link_to 'About', page_path('about') %></li>
+  <li><%= link_to 'News', articles_path %></li>
+  <li><%= link_to 'Blog', blogs_path %></li>
+  <li><%= link_to 'Vote', culsertions_path %></li>
+   <li>n/a<%#= link_to 'Admin', admin_root_path %></li>
+  <li>
+    <a href="#">   <%=  image_tag("twitter.png")  %></a>
+
+     <!-- <img alt="Twitter" height="34" src="/assets/icons/twitter.png" width="34" /> -->
+      <!-- <span class="name">follow on Twitter</span> -->
+
+  </li>
+  <li>  <a href="#">   <%=  image_tag("facebook.png", height: "34", class: "facebook")  %></a>
+   
+    <!-- <span class="name">follow on Facebook</span> -->
+  </li>
+</ul>
+     <div class="pull-right">
+      signin linkes etc
+        <%# if logged_in? %>
+          <%#= link_to 'Logout', destroy_user_session_path, method: :delete, class: 'btn' %>
+        <%# else %>
+          <%#= link_to 'Sign Up', new_user_registration_path, class: 'btn btn-primary' %>
+          <%#= link_to 'Sign In', new_user_session_path, class: 'btn btn-success' %>
+        <%# end %>
+      </div>

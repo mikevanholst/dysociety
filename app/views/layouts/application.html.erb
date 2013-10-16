@@ -1,14 +1,66 @@
 <!DOCTYPE html>
 <html>
-<head>
-  <title>Dysociety</title>
-  <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
-  <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
-  <%= csrf_meta_tags %>
-</head>
-<body>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><%= content_for?(:title) ? yield(:title) : "Rails Bootstrap" %></title>
+    <meta name="description" content="<%= content_for?(:description) ? yield(:description) : "Rails Bootstrap" %>">
+    <%= stylesheet_link_tag "application", :media => "all" %>
+    <%= javascript_include_tag "application" %>
+    <%= csrf_meta_tags %>
+<!--[if gte IE 9]>
+  <style type="text/css">
+    .gradient {
+       filter: none;
+    }
+  </style>
+<![endif]-->
 
-<%= yield %>
+  
 
-</body>
+  </head>
+  <body class="gradient">
+        <div id="bubble" class = "gradient">
+
+<!--  <header class="navbar navbar-fixed-top"> -->
+    <header class="navbar ">
+
+      <div class="banner row"> 
+
+        <div class="span7">
+        <h1 id="main-title">Design Your Society</h1>
+       <h4 id="subtitle">So the little guy can win!</h4>
+         
+        </div>
+ <%#= image_tag("winning_crowd.png", height: '100')  %>
+
+        <!-- <div class="span4 offset1"></div> -->
+      <!-- </div> -->
+       
+
+      </div>
+      <nav class="navbar-inner">
+        <div class="container">
+          <%= render 'layouts/navigation' %>
+        </div>
+      </nav>
+    </header>
+
+
+
+    <main role="main">
+      <div class="container">
+        <div class="content">
+           <div class="row">
+            <div class="span12">
+              <%= render 'layouts/messages' %>
+              <%= yield %>
+            </div>
+          </div>
+          <footer>
+          </footer>
+        </div>
+      </div>
+    </main>
+      </div>
+  </body>
 </html>
