@@ -14,8 +14,12 @@ padding-bottom: 50px;
 
 
   .bbox{
-    border: 2px white solid;
+    border: 2px white black;
+    background: linear-gradient(white, #bbc2de);
+    text-align: center;
     
+    border-radius:30px;
+    color:navy;
 
   
    }
