@@ -8,7 +8,7 @@ class CreateQuestions < ActiveRecord::Migration
       t.string :wrong_3
       t.string :success
       t.string :failure
-      t.belongs_to :quiz
+      t.belongs_to :quiz 
 
       t.timestamps
     end
