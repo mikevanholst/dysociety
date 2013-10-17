@@ -1,4 +1,6 @@
 Dysociety::Application.routes.draw do
+  resources :quizzes
+
   resources :questions
 
   devise_for :users
