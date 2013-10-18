@@ -3,7 +3,7 @@
  
     <% @chapters.each do |chapter| %>
    <div>
-      <h2> <%= chapter.number %>: <%= link_to chapter.title, chapter_path(chapter) %>  <%= link_to "Take Quiz", chapters_take_quiz_path, class: 'btn' %></h2>
+      <h2> <%= chapter.number %>: <%= link_to chapter.title, chapter_path(chapter) %>  <%= link_to "Take Quiz", take_quiz_chapter_path(chapter), class: 'btn' %></h2>
       
        <%= chapter.teaser %> 
     </div>

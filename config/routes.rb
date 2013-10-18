@@ -10,12 +10,20 @@ Dysociety::Application.routes.draw do
   end
 
   get "home/home"
-  get "chapters/take_quiz"
+  # get "chapters/take_quiz"
+
 
   get "home/quiz_trial"
 
-  resources :chapters
+  resources :chapters do
+    member do
+      get 'take_quiz'
+    end
+  end
 
+# resources :chapters do
+    
+#   end
 
   resources :companies
   resources :sashes

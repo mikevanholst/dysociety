@@ -1,24 +1,30 @@
-<meta charset="utf-8" />
-  <title>jQuery UI Accordion - Default functionality</title>
-  <link rel="stylesheet" href="http://code.jquery.com/ui/1.10.3/themes/smoothness/jquery-ui.css" />
-  <script src="http://code.jquery.com/jquery-1.9.1.js"></script>
-  <script src="http://code.jquery.com/ui/1.10.3/jquery-ui.js"></script>
-  <link rel="stylesheet" href="/resources/demos/style.css" />
- <script>
-  $(function() {
-    $( "#accordion" ).accordion();
-  });
-  </script>
- 
 
+
+
+ 
+params before I call for the chapter  
 <%= params.inspect %>
-<% @chapter = Chapter.first %>
-after chapter call
-<%= params.inspect %>
+<br><br>
+after chapter call  
+
+<%#= @chapter.inspect %>
+<%= params.inspect %><br><br>
+calling the actual chapter  
+
+<form name="input" action="#" method="post">
+
 <h2><%= @chapter.quiz.name %></h2>
 <div id="accordion">
-<% @chapter.quiz.questions.each do |question| %>
+<% @chapter.quiz.questions.each_with_index do |question, index | %>
   <% @question = question %>
+   <% @index = index + 1%>
    <%= render '/questions/question_display' %>
  <% end %>
  </div>
+<br>
+<input type="submit" value="Check your answers">
+</form>
+ 
+
+
+

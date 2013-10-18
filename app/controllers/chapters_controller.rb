@@ -1,10 +1,10 @@
 class ChaptersController < ApplicationController
-  before_action :set_chapter, only: [:show, :edit, :update, :destroy]
+  before_action :set_chapter, only: [:show, :edit, :update, :destroy, :take_quiz]
 
 
 # GET /chapters/1
   def take_quiz
- 
+
     
   end
 

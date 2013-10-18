@@ -7,7 +7,7 @@ gem 'rails', '4.0.0'
 gem 'pg'
 
 
-group assets do
+group :assets do
   gem 'jquery-rails'
   gem 'jquery-ui-rails'
   gem 'sass-rails', '~> 4.0.0'

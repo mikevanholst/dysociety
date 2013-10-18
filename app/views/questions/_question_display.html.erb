@@ -3,44 +3,71 @@
   <%# form_tag(chapters_path, :method=>'get') do %> 
    <%# form_tag(chapaters_path, :method=>'post') do %> 
    
-
-    <h3><%= @question.text %></h3>
+ 
+    <h3> <%= @index %>: <%= @question.text %></h3>
   <div>
     <p>
+      <% answer_value = "answer_#{@index}".to_sym %>
+      <%= answer_value %>
 
+      <!-- <input type="radio" name="Example" value="Example">Example Radio Button -->
   <table>
     <tr>
-      <td class="radio"><%= radio_button_tag(:answer, "answer") %></td>
-      <td><%= label_tag(:wrong_1, "#{@question.wrong_1}") %></td>
+      <td class="radio">
+        <input type="radio" name=<% "#{answer_value}" %> value=<% "#{@question.wrong_1}" %>   >  
+      </td>
+      <td>
+          <%= "#{@question.wrong_1}" %>
+      </td>
+      <br>
     </tr>
+
     <tr>
-      <td class="radio"><%= radio_button_tag(:answer, "answer") %></td>
-      <td><%= label_tag(:wrong_2, "#{@question.wrong_2}") %></td>
+      <td class="radio">
+        <input type="radio" name=<% "#{answer_value}" %> value=<% "#{@question.wrong_2}" %>   >  
+      </td>
+      <td>
+          <%= "#{@question.wrong_2}" %>
+      </td>
+      <br>
     </tr>
+
     <tr>
-      <td class="radio"><%= radio_button_tag(:answer, "answer") %></td>
-      <td><%= label_tag(:right, "#{@question.right}") %></td>
+      <td class="radio">
+        <input type="radio" name=<% "#{answer_value}" %> value=<% "#{@question.right}" %>   >  
+      </td>
+      <td>
+          <%= "#{@question.right}" %>
+      </td>
+      <br>
     </tr>
+
     <tr>
-      <td class="radio"><%= radio_button_tag(:answer, "answer") %></td>
-      <td><%= label_tag(:wrong_3, "#{@question.wrong_3}") %></td>
+      <td class="radio">
+        <input type="radio" name=<% "#{answer_value}" %> value=<% "#{@question.wrong_3}" %>   >  
+      </td>
+      <td>
+          <%= "#{@question.wrong_3}" %>
+      </td>
+      <br>
     </tr>
+
+
+      
   </table>
   <br>
   </p>
   <p> 
-    <%if @question.answer == @question.right %>
-      <%= "Correct: #{@question.success}" %>
-    <% else %>
-      <%=  "Incorrect: #{@question.failure}" %>  
-    <% end %>
- 
-    </p>
+   
+      <%if answer_value == @question.right %>
+        <%= "Correct: #{@question.success}" %>
+      <% else %>
+        <%=  "Incorrect: #{@question.failure}" unless answer_value == nil%> 
+        <%= answer_value %> 
+      <% end %>
+  
 
-    <p>
-   <%#= submit_tag 'Submit' %> submit
- </p>
-<%# end %>
+    </p>
 
 </div>
 
