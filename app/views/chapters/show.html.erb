@@ -2,7 +2,8 @@
 
 
 <div>
-      <h2> <%= @chapter.number %>:  <%=  @chapter.title %></h2>
+      <h2> <%= @chapter.number %>:  <%=  @chapter.title %> <%= link_to "Take Quiz", chapters_take_quiz_path, class: 'btn' %></h2>
+
        
        
         <br>

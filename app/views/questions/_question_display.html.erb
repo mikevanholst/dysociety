@@ -1,0 +1,52 @@
+
+<!-- <div class="question_box"> -->
+  <%# form_tag(chapters_path, :method=>'get') do %> 
+   <%# form_tag(chapaters_path, :method=>'post') do %> 
+   
+
+    <h3><%= @question.text %></h3>
+  <div>
+    <p>
+
+  <table>
+    <tr>
+      <td class="radio"><%= radio_button_tag(:answer, "answer") %></td>
+      <td><%= label_tag(:wrong_1, "#{@question.wrong_1}") %></td>
+    </tr>
+    <tr>
+      <td class="radio"><%= radio_button_tag(:answer, "answer") %></td>
+      <td><%= label_tag(:wrong_2, "#{@question.wrong_2}") %></td>
+    </tr>
+    <tr>
+      <td class="radio"><%= radio_button_tag(:answer, "answer") %></td>
+      <td><%= label_tag(:right, "#{@question.right}") %></td>
+    </tr>
+    <tr>
+      <td class="radio"><%= radio_button_tag(:answer, "answer") %></td>
+      <td><%= label_tag(:wrong_3, "#{@question.wrong_3}") %></td>
+    </tr>
+  </table>
+  <br>
+  </p>
+  <p> 
+    <%if @question.answer == @question.right %>
+      <%= "Correct: #{@question.success}" %>
+    <% else %>
+      <%=  "Incorrect: #{@question.failure}" %>  
+    <% end %>
+ 
+    </p>
+
+    <p>
+   <%#= submit_tag 'Submit' %> submit
+ </p>
+<%# end %>
+
+</div>
+
+
+
+  
+ 
+
+  

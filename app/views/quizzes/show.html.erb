@@ -4,15 +4,13 @@
   <strong>Name:</strong>
   <%= @quiz.name %>
 </p>
-
+<p>
+  <strong>Quiz ID:</strong>
+  <%= @quiz.id %>
+</p>
 <p>
   <strong>Size:</strong>
-  <%= @quiz.size %>
-</p>
-
-<p>
-  <strong>Score:</strong>
-  <%= @quiz.score %>
+  <%= @quiz.questions.count %> questions
 </p>
 
 <p>

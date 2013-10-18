@@ -1,6 +1,13 @@
 class ChaptersController < ApplicationController
   before_action :set_chapter, only: [:show, :edit, :update, :destroy]
 
+
+# GET /chapters/1
+  def take_quiz
+ 
+    
+  end
+
   # GET /chapters
   # GET /chapters.json
   def index

@@ -11,34 +11,48 @@
     </div>
   <% end %>
 
+  
+  <br>
   <div class="field">
-    <%= f.label :text %><br>
+    <%= f.label :text %>
     <%= f.text_field :text %>
   </div>
+  <br>
+  <div class="field">
+    <%= f.label :quiz_id, 'Associated Quiz' %>
+    <%= f.number_field :quiz_id %>
+  </div>
+  <br>
   <div class="field">
     <%= f.label :right %><br>
     <%= f.text_field :right %>
   </div>
+  <br
   <div class="field">
     <%= f.label :wrong_1 %><br>
     <%= f.text_field :wrong_1 %>
-  </div>
+ </div>
+  <br>
   <div class="field">
     <%= f.label :wrong_2 %><br>
     <%= f.text_field :wrong_2 %>
-  </div>
+</div>
+  <br>
   <div class="field">
     <%= f.label :wrong_3 %><br>
     <%= f.text_field :wrong_3 %>
-  </div>
+</div>
+  <br>
   <div class="field">
     <%= f.label :success %><br>
     <%= f.text_field :success %>
-  </div>
+ </div>
+  <br>
   <div class="field">
     <%= f.label :failure %><br>
     <%= f.text_field :failure %>
-  </div>
+ </div>
+  <br>
   <div class="actions">
     <%= f.submit %>
   </div>

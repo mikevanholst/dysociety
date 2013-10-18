@@ -11,10 +11,18 @@
 // about supported directives.
 //
 //= require jquery
+// = 43                                                                                                                                                                                                                                                                                                                                                                                                      
 //= require jquery_ujs
+
 //= require bootstrap
 //= require_tree .
 
 //= require slickQuiz-config
 //= require slickQuiz-ryan-config
 //= require slickQuiz
+
+ <script>
+  $(function() {
+    $( "#accordion" ).accordion();
+  });
+  </script>

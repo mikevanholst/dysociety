@@ -25,7 +25,7 @@ before_action :set_questions, only: [:show, :edit, :update, :destroy]
   # POST /questions
   # POST /questions.json
   def create
-    @question = Question.new(questions_params)
+    @question = Question.new(question_params)
 
     respond_to do |format|
       if @question.save
@@ -42,8 +42,8 @@ before_action :set_questions, only: [:show, :edit, :update, :destroy]
   # PATCH/PUT /questions/1.json
   def update
     respond_to do |format|
-      if @questions.update(questions_params)
-        format.html { redirect_to @questions, notice: 'Question was successfully updated.' }
+      if @question.update(question_params)
+        format.html { redirect_to questions_path, notice: 'Question was successfully updated.' }
         format.json { head :no_content }
       else
         format.html { render action: 'edit' }
@@ -55,7 +55,7 @@ before_action :set_questions, only: [:show, :edit, :update, :destroy]
   # DELETE /questions/1
   # DELETE /questions/1.json
   def destroy
-    @questions.destroy
+    @question.destroy
     respond_to do |format|
       format.html { redirect_to questions_url }
       format.json { head :no_content }
@@ -70,7 +70,7 @@ before_action :set_questions, only: [:show, :edit, :update, :destroy]
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def question_params
-      params.require(:question).permit(:text, :right, :wrong_1, :wrong_2, :wrong_3, :success, :failure)
+      params.require(:question).permit(:text, :right, :wrong_1, :wrong_2, :wrong_3, :answer, :success, :failure, :quiz_id)
     end
 end
 

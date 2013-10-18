@@ -10,15 +10,17 @@
  *
  *= require_self
  *= require bootstrap_and_overrides 
- *= require home
+
  *= require articles
  *= require blogs
  *= require culsertions
+  *= require questions
  *= require slickQuiz
+  *= require home
  */
 
 .content {
-  background-color: #eee;
+/*  background-color: #eee;*/
   padding: 20px;
   margin: 0 -20px;
   -webkit-border-radius: 0 0 6px 6px;

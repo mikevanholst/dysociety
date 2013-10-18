@@ -26,9 +26,9 @@
 
       <div class="banner row"> 
 
-        <div class="span7">
-        <h1 id="main-title">Design Your Society</h1>
-       <h4 id="subtitle">So the little guy can win!</h4>
+        <div class="span10">
+        <span id="main-title">Design Your Society</span>
+       <span id="subtitle">So the little guy can win!</span>
          
         </div>
  <%#= image_tag("winning_crowd.png", height: '100')  %>
@@ -52,7 +52,11 @@
            <div class="row">
             <div class="span12">
               <%= render 'layouts/messages' %>
-              <%= yield %>
+
+              <div class='charger'>
+                <%= yield %>
+              </div>
+            
             </div>
           </div>
           <footer>

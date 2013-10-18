@@ -2,8 +2,14 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
+.charger {
+// background-color: transparent;
+padding: 25px;
+}
+
+
 #book {
-  background: radial-gradient(blue, navy);
+  // background: radial-gradient(blue, navy);
 border: 2px white solid;
 padding-top: 50px;
 padding-bottom: 50px;
@@ -15,28 +21,38 @@ padding-bottom: 50px;
 
   .bbox{
     border: 2px white black;
-    background: linear-gradient(white, #bbc2de);
+    background: linear-gradient(white, #FB9E00);
+    // background: linear-gradient(#FB9E00, #FCD272);
     text-align: center;
-    
-    border-radius:30px;
+    width: 200px;
+    height: 200px;
+    border-radius:50%;
     color:navy;
 
   
    }
 }
 
+.book_backer {
+  // background: url('book.jpg') no-repeat center center relative; 
+  background-color: white;
+  width: 400px;
+  height: 400px;
+  border-radius: 50%;
+  text-align: center;
+  // padding-top: -100%;
 
+  
+
+
+}
 
 #book_photo {
+  margin-top: 10%;
+  height: 300px;
+
   
-  border: 2px solid navy;
-  // height: 300px;
-  width: 225px;
-  border-radius: 5px;
-  // margin-top:50px;
-  // margin-bottom:50px;
-  border: 2px white solid;
-margin:auto;
+  
 
 }
 #order_now {
