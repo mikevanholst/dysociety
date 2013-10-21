@@ -1,34 +1,25 @@
+<div class='charger'>
 <p id="notice"><%= notice %></p>
 
 <p>
-  <strong>Title:</strong>
-  <%= @blog.title %>
+ 
+  <h2><%= @blog.title %></h2>
 </p>
 
 <p>
-  <strong>Content:</strong>
-  <%= @blog.content %>
+
+  <%= raw @blog.content %>
 </p>
 
-<p>
-  <strong>Media:</strong>
-  <%= @blog.media %>
-</p>
+<br>
 
 <p>
   <strong>Author:</strong>
   <%= @blog.author %>
 </p>
 
-<p>
-  <strong>Posted on:</strong>
-  <%= @blog.posted_on %>
-</p>
 
-<p>
-  <strong>Teaser:</strong>
-  <%= @blog.teaser %>
-</p>
 
 <%= link_to 'Edit', edit_blog_path(@blog) %> |
 <%= link_to 'Back', blogs_path %>
+</div>

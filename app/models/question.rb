@@ -2,6 +2,8 @@ class Question < ActiveRecord::Base
 
   validates :text, :right, :wrong_1, :wrong_2, :wrong_3, :success, :failure, :quiz_id, presence: true
   belongs_to :quiz
+  has_many :answers
+  accepts_nested_attributes_for :answers
 
 
   def print_options_randomly(question)

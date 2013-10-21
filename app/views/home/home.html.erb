@@ -1,16 +1,48 @@
+<script type="text/javascript">
+$( document ).ready(function() {
+    console.log( "ready!" );
+// $(".bbox").mouseover(function(){
+      // $('.bbox').css("height", "210");
+    //  $('.bbox').addClass('hovering');
+    // }).mouseleave(function(){
+    //   $(".bbox").removeClass('hovering');
+    // });
 
 
-<div class="charger">
+ // $("button").click(function(){
+    $(".left_sun").delay(1500).animate({
+      marginTop:'0px',
+      height:'+=200px',
+      width:'+=200px'
+    },1500);
+
+ $(".right_sun").delay(1000).animate({
+      marginTop:'0px',
+      height:'+=200px',
+      width:'+=200px'
+    },1500);
+
+$("header").delay(10).animate({
+      marginTop:'15px',
+    
+    },1500);
+
+
+
+
+  // });
+
+});
+</script>
 <div id="book" >
   <div class="row">
-    <div class="span2  bbox" id='order_now'><a href="#">  <h2 >Get Up <br/> To Speed</h2> </a> </div>
-    <div class='span3 book_backer'><%=  image_tag("book.jpg", id: "book_photo" ) %></div>
-    <div class="span2 bbox" id='order_now'><a href="#">  <h2 >Get <br> Designing</h2> </a> </div>
+    <a href="#"><div class="span2 offset1 bbox left_sun" id='order_now '><h2>See<br/> How</h2></div></a>
+    <!-- <div class='span3 book_backer'><%=  image_tag("book.jpg", id: "book_photo" ) %></div> -->
+   <a href="#"> <div class="span2 offset3 bbox right_sun" id='order_now '><h2>Continue<br>Designing</h2> </div></a>
   </div>
 </div>
-</div>
 
 
 
 
-<%= render 'top_videos' %>
+

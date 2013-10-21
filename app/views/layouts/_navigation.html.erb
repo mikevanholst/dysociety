@@ -1,3 +1,5 @@
+
+ <%# unless controller='home_controller'%>
 <ul class="nav">
   <li><%= link_to 'Home', root_path %></li>
   <li><%#= link_to 'About', page_path('about') %></li>
@@ -9,9 +11,9 @@
     <li><%= link_to 'questions', questions_path if current_user%></li>
        <li><%= link_to 'Quizzes', quizzes_path if current_user%></li>
           <li><%= link_to 'Fun', new_user_registration_path unless current_user%></li>
-   <li>n/a<%#= link_to 'Admin', admin_root_path %></li>
+   <li><%#= link_to 'Admin', admin_root_path %></li>
   <li>
-    <a href="#">   <%=  image_tag("twitter.png") unless current_user %></a>
+    <a href="#">   <%#=  image_tag("twitter.png") unless current_user %></a>
 
      <!-- <img alt="Twitter" height="34" src="/assets/icons/twitter.png" width="34" /> -->
       <!-- <span class="name">follow on Twitter</span> -->
@@ -31,3 +33,6 @@
           <%= link_to 'Sign In', new_user_session_path, class: 'btn btn-success' %>
         <% end %>
       </div>
+
+    <%# end %>
+      

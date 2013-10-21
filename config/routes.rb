@@ -1,6 +1,9 @@
 Dysociety::Application.routes.draw do
  
 
+  get "design/introduction"
+  get "design/index"
+  get "answers/index"
   resources :quizzes
 
   resources :questions

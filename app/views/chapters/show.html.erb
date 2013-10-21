@@ -1,8 +1,10 @@
+
+<div class='charger'>
 <!-- <p id="notice"><%#= notice %></p> -->
 
 
 <div>
-      <h2> <%= @chapter.number %>:  <%=  @chapter.title %> <%= link_to "Take Quiz", chapters_take_quiz_path, class: 'btn' %></h2>
+      <h2> <%= @chapter.number %>:  <%=  @chapter.title %> <%= link_to "Take Quiz", take_quiz_chapter_path(@chapter), class: 'btn' %></h2>
 
        
        
@@ -13,3 +15,4 @@
 Take the quiz - earn some points
 <%= link_to 'Edit', edit_chapter_path(@chapter) %> |
 <%= link_to 'Back', chapters_path %>
+</div>

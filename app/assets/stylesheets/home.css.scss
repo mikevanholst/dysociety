@@ -8,29 +8,49 @@ padding: 25px;
 }
 
 
+.splash { margin-top: -300px}
+
 #book {
   // background: radial-gradient(blue, navy);
-border: 2px white solid;
+// border: 2px white solid;
 padding-top: 50px;
 padding-bottom: 50px;
 
   .row {
     margin:auto;
+
   }
-
-
+    a:hover {text-decoration: none; }
+     
+    
+    
   .bbox{
-    border: 2px white black;
+    margin-top: 1000px;
+
+    position: relative;
     background: linear-gradient(white, #FB9E00);
     // background: linear-gradient(#FB9E00, #FCD272);
     text-align: center;
-    width: 200px;
-    height: 200px;
+    width: 10px;
+    height: 10px;
     border-radius:50%;
     color:navy;
+    vertical-align: center;
 
-  
+
+    h2 { padding-top:25%; }  
    }
+
+    .bbox:hover {
+      border: 2px solid yellow;
+      width: 210px;
+      height: 210px; 
+      background: linear-gradient(white, #f7cf09);
+      margin-right: -1px;
+      h2{font-size: 2.5em;}
+
+      }
+
 }
 
 .book_backer {

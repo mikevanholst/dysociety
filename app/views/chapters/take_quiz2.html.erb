@@ -1,7 +1,8 @@
 
-<div class='charger'>
+
+
 <%= form_for @chapter.quiz do |f|  %>
- 
+  @quiz = @chapter.quiz
 
 <h2><%= @chapter.quiz.name %></h2>
 <div id="accordion">
@@ -34,6 +35,20 @@
 
 
 
+  <% number = index + 1 %>
+  <%= fields_for :question, question do |q|%>
+  <h3> <%= number %>: <%= question.text  %></h3>
+    <div>
+      <% option_hash.each do |k,v|%> 
+        <%= label_tag("question_#{question.id}_#{k}") do %>
+          <%#= q.radio_button("#{question.id}", k)  %>
+          <%= radio_button_tag("question[#{question.id}]", k)  %>
+          <%= v %>
+        <% end %>
+      <% end %>
+    </div>
+  <% end %>
+
 
 
 
@@ -50,7 +65,7 @@
  
 <% end %>
 
-</div>
+
 
 
   <%# @question = question %>
