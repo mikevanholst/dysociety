@@ -37,11 +37,16 @@ border: 2px solid #FDB96D;
 }
 
 .charger {
-background-color: #fff290;
-padding: 25px;
-width:80%;
-border-radius: 25PX;
+  background-color: #fff290;
+  padding: 25px 100px 25px 25px;
 
+  border-radius: 25px;
+
+  border: 1px solid #FDB96D;
+  display: -moz-inline-stack;
+  display: inline-block;
+  zoom: 1;
+  *display: inline;
 
 }
 
@@ -60,6 +65,15 @@ border-radius: 25PX;
   margin-top: 15px;
   margin-bottom: 15px;
  
+}
+
+#accordion {
+  min-width: 400px;
+ 
+  display: -moz-inline-stack;
+  display: inline-block;
+  zoom: 1;
+  *display: inline;
 }
 
 .banner {

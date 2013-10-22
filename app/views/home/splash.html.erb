@@ -28,17 +28,24 @@ $("header").delay(0).animate({
     },1500);
 
 
-
-
   // });
 
 });
 </script>
 <div id="book" >
   <div class="row">
-    <a href="#"><div class="span2 offset1 bbox left_sun" id='order_now '><h2>See<br/> How</h2></div></a>
-    <!-- <div class='span3 book_backer'><%=  image_tag("book.jpg", id: "book_photo" ) %></div> -->
-   <a href="#"> <div class="span2 offset3 bbox right_sun" id='order_now '><h2>Continue<br>Designing</h2> </div></a>
+    <%= link_to design_introduction_path do %>
+      <div class="span2 offset1 bbox left_sun" id='left_sun '>
+        <h2>See<br/> How</h2>
+      </div>
+    <% end %>
+
+    <%= link_to new_user_session_path do%>
+      <div class="span2 offset3 bbox right_sun" id='right_sun '>
+        <h2>Continue<br>Designing</h2> 
+      </div>
+    <% end %>
+    
   </div>
 </div>
 

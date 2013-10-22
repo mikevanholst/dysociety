@@ -1,0 +1,31 @@
+<h1>Our Allies</h1>
+
+The following are groups with whom we share the vision of achieving greater autonomy for the average person, a process that we call pico-empowerment. We encourage you to investigate what they have to offer and support then in whichever ways you can.  You are welcome to partner with us if your organization shares this vision. 
+
+
+
+    <% @allies.each do |ally| %>
+    
+    <div class="row">
+      <div class = 'span4'>
+        <h2><%= link_to ally.name, ally.url %></h2>
+        
+        <%= ally.description %><br/>  
+        <%= ally.url  %>
+      </div>
+
+        <div class = 'span4 offset2'>
+      
+        <%= ally.logo %>
+      </div>
+        <%= link_to 'Show', ally %>
+        <%= link_to 'Edit', edit_ally_path(ally) %>
+        <%= link_to 'Destroy', ally, method: :delete, data: { confirm: 'Are you sure?' } %>
+     </div>
+
+    <% end %>
+  
+
+<br>
+
+<%= link_to 'New Ally', new_ally_path %>

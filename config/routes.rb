@@ -1,6 +1,8 @@
 Dysociety::Application.routes.draw do
  
 
+  resources :allies
+
   get "design/introduction"
   get "design/index"
   get "answers/index"
@@ -12,7 +14,7 @@ Dysociety::Application.routes.draw do
     resources :scorecards
   end
 
-  get "home/home"
+  get "home/splash"
   # get "chapters/take_quiz"
 
 
@@ -51,7 +53,7 @@ end
   # See how all your routes lay out with "rake routes".
 
   # You can have the root of your site routed with "root"
-  root 'home#home'
+  root 'home#splash'
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'

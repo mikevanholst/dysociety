@@ -1,9 +1,7 @@
 class HomeController < ApplicationController
-  def home
+  def splash
   end
 
-  def quiz_trial
-    
-  end
+  
 
 end
