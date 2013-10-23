@@ -6,6 +6,9 @@ gem 'rails', '4.0.0'
 # Use sqlite3 as the database for Active Record
 gem 'pg'
 
+group :production do
+  gem 'thin'  
+end
 
 group :assets do
   gem 'jquery-rails'

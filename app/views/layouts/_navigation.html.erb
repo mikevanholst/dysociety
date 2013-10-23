@@ -1,6 +1,7 @@
 
  <%# unless controller='home_controller'%>
 <ul class="nav">
+    <li><%= link_to 'splash', (root_path) %></li>
   <li><%= link_to 'Home', (current_user ? design_index_path : design_introduction_path) %></li>
   <li><%#= link_to 'About', page_path('about') %></li>
   <li><%= link_to 'News', articles_path if current_user %></li>
@@ -8,8 +9,8 @@
   <li><%= link_to 'Blog', blogs_path if current_user %></li>
   <li><%= link_to 'Vote', culsertions_path if current_user %></li>
    <li><%= link_to 'Companies', companies_path if current_user%></li>
-    <li><%= link_to 'Allies', allies_path if current_user%></li>
-    <li><%= link_to 'questions', questions_path if current_user%></li>
+    <li><%= link_to 'Crowd-Funding', allies_path if current_user%></li>
+    <li><%= link_to 'Profile', questions_path if current_user%></li>
        <li><%= link_to 'Quizzes', quizzes_path if current_user%></li>
           <li><%= link_to 'Fun', new_user_registration_path unless current_user%></li>
    <li><%#= link_to 'Admin', admin_root_path %></li>

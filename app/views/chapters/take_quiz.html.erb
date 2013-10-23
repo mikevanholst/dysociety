@@ -15,8 +15,6 @@
   right: question[:right], 
   wrong_3: question[:wrong_3] } %>
 
-
-
  <% number = index + 1 %>
   <%= fields_for :question, question do |q|%>
   <h3> <%= number %>: <%= question.text  %></h3>
@@ -35,8 +33,9 @@
 
 <br>
 <input type="submit" value="Check your answers">
-
- 
+<div class="actions">
+    <%= f.submit %>
+  </div>
 <% end %>
 
 </div>
