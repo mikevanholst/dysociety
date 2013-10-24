@@ -6,6 +6,12 @@ require 'rails/all'
 # you've limited to :test, :development, or :production.
 Bundler.require(:default, Rails.env)
 
+# config/application.rb  pager sourse for this fix: http://viget.com/extend/fixing-missing-assets-with-rails-4-on-heroku
+    config.assets.precompile += [
+      'skyline-translucent.jpg'
+    ]
+  
+
 module Dysociety
   class Application < Rails::Application
     # Settings in config/environments/* take precedence over those specified here.
