@@ -7,9 +7,9 @@ require 'rails/all'
 Bundler.require(:default, Rails.env)
 
 # config/application.rb  pager sourse for this fix: http://viget.com/extend/fixing-missing-assets-with-rails-4-on-heroku
-    config.assets.precompile += [
-      'skyline-translucent.jpg'
-    ]
+    # config.assets.precompile += [
+    #   'skyline-translucent.jpg'
+    # ]
   
 
 module Dysociety
