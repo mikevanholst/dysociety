@@ -9,6 +9,7 @@ gem 'pg'
 group :production do
   gem 'unicorn'
   gem 'rails_12factor'
+  gem 'rails_serve_static_assets'
 end
 
 group :assets do
@@ -64,11 +65,11 @@ end
 
 # Use Capistrano for deployment
 # gem 'capistrano', group: :development
-
+  gem "better_errors"
 group :development, :test do 
   gem 'letter_opener'
   gem 'debugger'
-  gem "better_errors"
+  # gem "better_errors"
   gem "binding_of_caller"
   gem "pry-rails"
   gem "rspec"
