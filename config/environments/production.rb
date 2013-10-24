@@ -34,6 +34,26 @@ Dysociety::Application.configure do
   #this is a fix of the above line for heroku
   config.assets.compile=true
 
+config.action_mailer.raise_delivery_errors = true
+config.action_mailer.delivery_method = :smtp
+config.action_mailer.default_url_options = { :host => 'http://fathomless-peak-2342.herokuapp.com/' }
+ActionMailer::Base.smtp_settings = {
+  :address    => "smtp.sendgrid.net",
+  :port       => 25,
+  :user_name  => ENV['SENDGRID_USERNAME'],
+  :password   => ENV['SENDGRID_PASSWORD'],
+  :domain     => ENV['SENDGRID_DOMAIN'],
+  :authentication  => :plain
+}
+
+
+
+
+
+
+
+
+
 
   # Generate digests for assets URLs.
   config.assets.digest = true

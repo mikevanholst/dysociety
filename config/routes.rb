@@ -1,59 +1,43 @@
 Dysociety::Application.routes.draw do
  
+ # You can have the root of your site routed with "root"
+  root 'design/introduction'
 
+  get "home/quiz_trial"
   resources :allies
-
+  get "home/splash"
   get "design/introduction"
   get "design/index"
   get "answers/index"
   resources :quizzes
-
   resources :questions
+  resources :companies
+  resources :sashes
+  resources :badges
+  resources :categories 
+  resources :videos
+  resources :culsertions
+  resources :blogs
+  resources :articles
+
 
   devise_for :users do
     resources :scorecards
   end
 
-  get "home/splash"
-  # get "chapters/take_quiz"
-
-
-  get "home/quiz_trial"
-
-  resources :chapters do
+   resources :chapters do
     member do
       get 'take_quiz'
     end
   end
 
-# resources :chapters do
-    
-#   end
-
-  resources :companies
-  resources :sashes
-
-  resources :badges
 
   
-
-  resources :categories do
-end
-
- 
-  resources :videos
-
-  resources :culsertions
-
-  resources :blogs
-
-  resources :articles
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
-  # You can have the root of your site routed with "root"
-  root 'home#splash'
+  
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
