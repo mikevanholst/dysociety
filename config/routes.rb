@@ -1,7 +1,7 @@
 Dysociety::Application.routes.draw do
  
  # You can have the root of your site routed with "root"
-  root 'design/introduction'
+  root 'design#introduction'
 
   get "home/quiz_trial"
   resources :allies
