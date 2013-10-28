@@ -32,16 +32,20 @@ $("header").delay(0).animate({
 
 });
 </script>
+
+<h1>Hi Sendgrid</h1>
+<p>This site will be used to promote a book, but at this point I am just learning web development and trying to get all the elements to work on heroku. Thanks.</p>
+
 <div id="book" >
   <div class="row">
     <%= link_to design_introduction_path do %>
-      <div class="span2 offset1 bbox left_sun" id='left_sun '>
+      <div class="span2 offset1 bbox left_sun gradient" id='left_sun '>
         <h2>See<br/> How</h2>
       </div>
     <% end %>
 
     <%= link_to design_index_path do%>
-      <div class="span2 offset3 bbox right_sun" id='right_sun '>
+      <div class="span2 offset3 bbox right_sun gradient" id='right_sun '>
         <h2>Continue<br>Designing</h2> 
       </div>
     <% end %>
