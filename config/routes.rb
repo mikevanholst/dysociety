@@ -9,16 +9,9 @@ Dysociety::Application.routes.draw do
   get "design/introduction"
   get "design/index"
   get "answers/index"
-  resources :quizzes
-  resources :questions
-  resources :companies
-  resources :sashes
-  resources :badges
-  resources :categories 
-  resources :videos
-  resources :culsertions
-  resources :blogs
-  resources :articles
+  resources :quizzes,:questions, :companies, :sashes, :badges, 
+  :categories,  :videos, :culsertions, :blogs, :articles, 
+  :charges
 
 
   devise_for :users do
