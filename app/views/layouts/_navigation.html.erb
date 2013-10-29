@@ -5,6 +5,7 @@
   <li><%= link_to 'Home', (current_user ? design_index_path : design_introduction_path) %></li>
   <li><%#= link_to 'About', page_path('about') %></li>
   <li><%= link_to 'News', articles_path if current_user %></li>
+    <li><%= link_to 'Stripe', (new_charge_path) %></li>
    <li><%= link_to 'Chapters', chapters_path if current_user %></li>
   <li><%= link_to 'Blog', blogs_path if current_user %></li>
   <li><%= link_to 'Vote', culsertions_path if current_user %></li>
