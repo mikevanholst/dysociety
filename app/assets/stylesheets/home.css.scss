@@ -26,10 +26,11 @@ padding-bottom: 50px;
 
     position: relative;
     background-color: #FB9E00;
-    background: linear-gradient(white, #FB9E00);
-    //-webkit-gradient(<type>, <point> [, <radius>]?, <point> [, <radius>]? [, <stop>]*) 
-    background: -webkit-gradient(linear, 0 0, 0 100%, from(white), to(#FB9E00));  
-    // background: linear-gradient(#FB9E00, #FCD272);
+    +linear-gradient(color-stops(white, blue));
+    // background: linear-gradient(white, #FB9E00);
+    // //-webkit-gradient(<type>, <point> [, <radius>]?, <point> [, <radius>]? [, <stop>]*) 
+    // background: -webkit-gradient(linear, 0 0, 0 100%, from(white), to(#FB9E00));  
+    // // background: linear-gradient(#FB9E00, #FCD272);
     text-align: center;
     width: 10px;
     height: 10px;
